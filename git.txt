@@ -4,7 +4,7 @@
 1. Ctrl + Alt + T 唤出终端,  输入sudo apt-get update更新软件源
 
 2. 可安装Ruby
-# sudo apt-get install ruby
+$ sudo apt-get install ruby
 
 3.安装并启动sublime text
 1) 添加sublime text 3的仓库：
@@ -33,3 +33,14 @@ $ subl id_rsa.pub
 5）添加公钥
 登陆GitHub，打开“settings”，“SSH and GPG Keys”页面：
 点“New SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
+6）建立仓库并初始化：
+$ git init
+7) 新建文件并提交
+$ git add .
+$ git commit -m "说明"
+
+7)增加github远程来源
+$ git remote add origin https://github.com/frankwang0909/LearnUbuntu.git
+
+8)提交至github仓库
+$ git push -u origin master
