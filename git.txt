@@ -1,0 +1,35 @@
+<!-- learning basic knowledge of using Ubuntu OS -->
+
+
+1. Ctrl + Alt + T 唤出终端,  输入sudo apt-get update更新软件源
+
+2. 可安装Ruby
+# sudo apt-get install ruby
+
+3.安装并启动sublime text
+1) 添加sublime text 3的仓库：
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+2)更新软件库：
+sudo apt-get update 
+3)安装sublime text 3:
+sudo apt-get install sublime-text-installer
+4)启动sublime text 3
+subl
+
+4.安装并启动git
+1)安装git:
+$ sudo apt-get install git-core
+2)设置用户：
+$ git config --global user.name "frankwang"
+$ git config --global user.email "804926879@qq.com"
+3)创建验证用的公钥:
+$ ssh-keygen -t rsa -C "804926879@qq.com"
+用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥
+4)拷贝公钥内容：
+进入到/.ssh目录下，用sublime打开id_rsa.pub公钥文件，copy其内容：
+$ cd ~/.ssh
+$ ls
+$ subl id_rsa.pub
+5）添加公钥
+登陆GitHub，打开“settings”，“SSH and GPG Keys”页面：
+点“New SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
